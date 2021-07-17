@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 
-namespace AngleVisualiser
+namespace AngleVisualiser.Shared
 {
     public static class MathHelper
-    {
-        // var resultRotation = Quaternion.LookRotation(hitNormal, -ReferenceUp);
+    { 
         public static Quaternion FindHitPointRotation(Vector3 normal, Vector3 up, Vector3 offsetEulers)
         {
             var resultRotation = Quaternion.LookRotation(normal, -up);
-            resultRotation *= Quaternion.Euler(offsetEulers); //Quaternion.Euler(new Vector3(90, 0, 0));
+            resultRotation *= Quaternion.Euler(offsetEulers); 
             return resultRotation;
-        }
-        //var result = center + ((direction - ReferenceForward) * radius * radiusOfText);
+        } 
         public static Vector3 GetPositionOnCircle(Vector3 center, Vector3 forward, Vector3 right, float circleRadius, float positionRadius)
         {
             var result = center + ((right + forward).normalized * circleRadius * positionRadius);

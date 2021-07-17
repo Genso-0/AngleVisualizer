@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-namespace AngleVisualiser
+namespace AngleVisualiser.Shared
 {
     public class RotateGameObject : MonoBehaviour
     {

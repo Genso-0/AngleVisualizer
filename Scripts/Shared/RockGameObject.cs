@@ -1,6 +1,6 @@
 ﻿
 using UnityEngine;
-namespace AngleVisualiser
+namespace AngleVisualiser.Shared
 {
     public class RockGameObject : MonoBehaviour
     {

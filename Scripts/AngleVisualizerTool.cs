@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AngleVisualiser.Shared;
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -98,8 +99,8 @@ namespace AngleVisualiser
                     //Angle Text
                     if (drawText)
                     {
-                        externalAngleText.DrawText(MathHelper.GetPositionOnCircle(hitPoint, ReferenceForward, -orthogonalToNormalRight, radius, radiusOfText), hitRotation, $"{ Math.Round(externalAngle, 2)} °");
-                        internalAngleText.DrawText(MathHelper.GetPositionOnCircle(hitPoint, ReferenceForward, orthogonalToNormalRight, radius, radiusOfText), hitRotation, $"{ Math.Round(internalAngle, 2)} °");
+                        externalAngleText.DrawText(MathHelper.GetPositionOnCircle(hitPoint, -ReferenceForward, -orthogonalToNormalRight, radius, radiusOfText), hitRotation, $"{ Math.Round(externalAngle, 2)} °");
+                        internalAngleText.DrawText(MathHelper.GetPositionOnCircle(hitPoint, -ReferenceForward, orthogonalToNormalRight, radius, radiusOfText), hitRotation, $"{ Math.Round(internalAngle, 2)} °");
                     }
                 }
             }

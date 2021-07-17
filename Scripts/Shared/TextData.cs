@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace AngleVisualiser
+namespace AngleVisualiser.Shared
 {
     [Serializable]
     public class TextData

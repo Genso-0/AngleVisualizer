@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace AngleVisualiser
+namespace AngleVisualiser.Shared
 {
     public static class DrawHelper
     {
@@ -9,8 +9,7 @@ namespace AngleVisualiser
         static readonly Color arcColorAcute = new Color(0.7f, 0, 0.0f, 0.1f);
         static readonly Color arcColorRight = new Color(0.0f, 0, 0.7f, 0.1f);
         public static void DrawArc(Vector3 pos, float radius, float angle, Vector3 normal, Vector3 from, Color color)
-        {
-
+        { 
             UnityEditor.Handles.color = color;
             UnityEditor.Handles.DrawSolidArc(pos, normal, from, angle, radius);
             UnityEditor.Handles.color = Color.white;
